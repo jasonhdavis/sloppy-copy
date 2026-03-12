@@ -5,6 +5,7 @@ class Story(models.Model):
     STATUS_CHOICES = [
         ('ingested', 'Ingested'),
         ('evaluated', 'Evaluated'),
+        ('matched', 'Matched'),
         ('assigned', 'Assigned'),
         ('rewritten', 'Rewritten'),
         ('rejected', 'Rejected'),
