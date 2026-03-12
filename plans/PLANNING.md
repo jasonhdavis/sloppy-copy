@@ -23,6 +23,36 @@ sloppy-copy/
 └── stories/            # Story ingestion & Editor AI evaluation
 ```
 
+## UI Architecture (Revised)
+The system is split into two distinct interfaces to separate public consumption from editorial operations.
+
+### 1. Public Front End (`/`)
+- **Aesthetic**: High-end digital newspaper (NYT/WSJ style).
+- **Focus**: Displaying the final `Rewrites`.
+- **Routes**:
+  - `/`: Homepage featuring top AI-generated stories.
+  - `/authors/`: Public list of author personas.
+  - `/authors/<slug>/`: Author profile and their generated articles.
+  - `/rewrites/<id>/`: Full article view.
+
+### 2. Editorial CMS (`/cms/`)
+- **Aesthetic**: Operational dashboard, dense information, control-focused.
+- **Focus**: Managing the pipeline, reviewing raw feeds, and controlling AI runs.
+- **Features**:
+  - **Source News Feed Dashboard**: A "firehose" of raw ingested stories.
+  - **Manual Rewrite**: A "Rewrite" button + modal on each source story that lets an editor select an author to write it.
+  - **Markdown Editor**: EasyMDE integration for reviewing and editing copy.
+- **Routes**:
+  - `/cms/`: Operational dashboard with pipeline stats and controls.
+  - `/cms/digest/`: The "Source Digest" firehose of raw ingested stories.
+  - `/cms/sources/`: Management of RSS feeds and testing.
+  - `/cms/pipeline/`: Detailed logs of `PipelineRuns`.
+
+## Content Handling & AI
+- **Source Parsing**: Ensure source material is parsed correctly, stripping or interpreting HTML and handling images.
+- **AI Output**: Ensure proper AI output that includes formatting (Markdown) and images.
+- **Author Personas**: Seed personas can be injected from markdown files (e.g., `docs/author-*.md`).
+
 ## Core Pipeline Flow
 1. **Ingestion**: `sources.services.FeedIngestionService` fetches RSS feeds.
 2. **Source Digest**: A masonry-style UI for human review and feed testing.
