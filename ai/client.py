@@ -15,7 +15,13 @@ class AIClient:
     Handles prompt loading, rendering, execution, and JSON parsing.
     """
     def __init__(self, provider=None):
-        self.provider = provider or OpenRouterProvider()
+        if provider:
+            self.provider = provider
+        elif getattr(settings, "USE_MOCK_AI", False):
+            from .mock_provider import MockAIProvider
+            self.provider = MockAIProvider()
+        else:
+            self.provider = OpenRouterProvider()
         self.default_model = getattr(settings, "DEFAULT_AI_MODEL", "anthropic/claude-3-haiku")
 
     def generate(
