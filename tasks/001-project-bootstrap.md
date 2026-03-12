@@ -134,7 +134,7 @@ These values will later be used by [`AIClient`](ai/client.py:1).
 - `python manage.py runserver`
 
 ## Success Criteria
-- [ ] Virtual environment is active and dependencies are installed.
-- [ ] Django project and all apps are created.
-- [ ] `python manage.py check` returns no issues.
+- [x] Virtual environment is active and dependencies are installed.
+- [x] Django project and all apps are created.
+- [x] `python manage.py check` returns no issues.
 - [ ] Development server starts without errors.
