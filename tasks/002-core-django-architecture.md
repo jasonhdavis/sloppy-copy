@@ -185,6 +185,6 @@ Admin Requirements:
 - `python manage.py showmigrations`
 
 ## Success Criteria
-- [ ] All models are defined according to the architecture spec.
-- [ ] Migrations are created and applied without errors.
-- [ ] Admin interface shows all models.
+- [x] All models are defined according to the architecture spec.
+- [x] Migrations are created and applied without errors.
+- [x] Admin interface shows all models.
