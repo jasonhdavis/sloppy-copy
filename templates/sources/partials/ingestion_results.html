@@ -1,0 +1,20 @@
+<div class="mb-6 p-4 bg-gray-50 border border-gray-200 font-sans text-xs">
+    <h4 class="font-bold uppercase tracking-widest mb-2">Ingestion Results</h4>
+    <ul class="space-y-1">
+        {% for result in results %}
+        <li class="flex justify-between">
+            <span>{{ result.source }}</span>
+            {% if result.status == 'success' %}
+            <span class="text-green-700 font-bold">{{ result.created }} NEW STORIES</span>
+            {% else %}
+            <span class="text-red-700 font-bold">ERROR: {{ result.error }}</span>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="mt-4">
+        <button onclick="window.location.reload()" class="text-blue-600 hover:underline uppercase font-bold tracking-tighter">
+            Click here to refresh page and see new stories
+        </button>
+    </div>
+</div>

@@ -3,7 +3,7 @@ from sources.models import Source
 
 class Story(models.Model):
     STATUS_CHOICES = [
-        ('new', 'New'),
+        ('ingested', 'Ingested'),
         ('evaluated', 'Evaluated'),
         ('assigned', 'Assigned'),
         ('rewritten', 'Rewritten'),
@@ -19,7 +19,7 @@ class Story(models.Model):
     ingested_at = models.DateTimeField(auto_now_add=True)
 
     # Evaluation Fields
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='new')
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='ingested')
     ai_score = models.FloatField(null=True, blank=True)
     ai_rationale = models.TextField(null=True, blank=True)
     topic_tags = models.JSONField(default=list, blank=True)

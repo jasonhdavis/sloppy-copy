@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Source Digest — Sloppy Copy{% endblock %}
+
+{% block content %}
+<div class="flex justify-between items-end mb-8 border-b border-black pb-4">
+    <div>
+        <h2 class="font-serif text-4xl font-bold">Source Digest</h2>
+        <p class="font-sans text-sm text-gray-600 uppercase tracking-widest mt-1">Latest Ingested Stories</p>
+    </div>
+    <div>
+        <button 
+            hx-post="{% url 'sources:ingest_feeds' %}"
+            hx-target="#ingestion-status"
+            hx-swap="innerHTML"
+            class="bg-black text-white px-6 py-2 font-sans text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-colors"
+        >
+            Refresh Feeds
+        </button>
+    </div>
+</div>
+
+<div id="ingestion-status"></div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+    {% for story in stories %}
+    <div class="flex flex-col py-6 border-b border-gray-200">
+        <span class="font-sans text-[10px] font-bold uppercase tracking-tighter text-gray-600 mb-1">
+            {{ story.source.name }}
+        </span>
+        <h3 class="font-serif text-xl font-bold text-black leading-tight mb-2 hover:text-gray-700 cursor-pointer">
+            <a href="{% url 'sources:story_detail' story.pk %}">{{ story.title }}</a>
+        </h3>
+        {% if story.summary %}
+        <p class="font-serif text-sm text-gray-800 leading-snug mb-3 line-clamp-3">
+            {{ story.summary|striptags }}
+        </p>
+        {% endif %}
+        <div class="flex items-center gap-2 mt-auto">
+            <span class="font-sans text-[10px] text-gray-500">{{ story.published_at|date:"F j, Y"|upper }}</span>
+            <span class="text-gray-300">|</span>
+            <a href="{{ story.url }}" target="_blank" class="font-sans text-[10px] text-blue-600 hover:underline uppercase">Original Source</a>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-span-full py-12 text-center">
+        <p class="font-serif text-xl text-gray-500 italic">No stories ingested yet. Click "Refresh Feeds" to start.</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% if is_paginated %}
+<div class="flex justify-center mt-12 gap-4 font-sans text-xs font-bold uppercase tracking-widest">
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}" class="hover:underline">&larr; Newer</a>
+    {% endif %}
+    
+    <span class="text-gray-400">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+    
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="hover:underline">Older &rarr;</a>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}
