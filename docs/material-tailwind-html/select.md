@@ -1,0 +1,373 @@
+### Select
+
+
+Use our Tailwind CSS select component to collect user provided information
+from a list of options.
+
+A select component is a dropdown menu for displaying choices. Use the radio
+component when there are fewer total options (less than 5).
+
+See below our select component example that you can use in your Tailwind CSS
+project. The example comes in different colors and styles, so you can adapt it
+easily to your needs.
+
+  
+
+## Simple City Select
+
+Use this versatile Select component with 4 options available and styled with
+Tailwind CSS to collect user information. This example fits perfectly in forms
+to let the users choose their country.
+
+Your Country
+
+BrazilBucharestLondonWashington
+
+    
+    
+    <div class="w-full max-w-sm min-w-[200px]">      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+
+* * *
+
+## Select Sizes
+
+Use this versatile Select component with 4 options available and styled with
+Tailwind CSS to collect user information. This example fits perfectly in forms
+to let the users choose their country.
+
+BrazilBucharestLondonWashington
+
+BrazilBucharestLondonWashington
+
+BrazilBucharestLondonWashington
+
+    
+    
+    <div class="w-full max-w-sm min-w-[200px]">      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-1.5 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+     
+    <div class="w-full max-w-sm min-w-[200px] mt-4">      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+     
+    <div class="w-full max-w-sm min-w-[200px] mt-4">      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-3 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-3.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+
+* * *
+
+## Select Disabled
+
+Disabled dropdown select styled with Tailwind CSS, ideal for showing a locked
+or default option in forms.
+
+BrazilBucharestLondonWashington
+
+    
+    
+    <div class="w-full max-w-sm min-w-[200px]">
+      <div class="relative">
+        <select
+            disabled
+            class="pointer-events-none opacity-50 w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="opacity-50 h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+
+* * *
+
+## Select With Validation
+
+Validated select component with error and success styles using Tailwind CSS,
+perfect for form feedback.
+
+BrazilBucharestLondonWashington
+
+BrazilBucharestLondonWashington
+
+    
+    
+    <div class="w-full max-w-sm min-w-[200px]">      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-red-400 text-red-700 text-sm border border-red-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-red-500 hover:border-red-300 shadow-sm focus:shadow appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+    <div class="w-full max-w-sm min-w-[200px] mt-4">      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-green-400 text-green-700 text-sm border border-green-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-green-500 hover:border-green-300 shadow-sm focus:shadow appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+
+* * *
+
+## Select with Label
+
+Use this select component that features a clean, minimal design, labeled "Your
+Country" with "Brazil" as the selected option. It includes a dropdown arrow on
+the right side, allowing users to choose their country from a predefined list.
+
+Your Country
+
+BrazilBucharestLondonWashington
+
+    
+    
+    <div class="w-full max-w-sm min-w-[200px]">
+      <label class="block mb-1 text-sm text-slate-800">
+          Your Country
+      </label>
+      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+    </div>
+
+* * *
+
+## Select with Helper Text
+
+Responsive location select dropdown with helper text, enhancing user
+experience by providing location-specific options. Perfect for forms and
+interfaces.
+
+BrazilBucharestLondonWashington
+
+Your location helps us to provide location-specific services.
+
+    
+    
+    <div class="w-full max-w-sm min-w-[200px]">      
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+      <p class="flex items-center mt-2 text-xs text-slate-500">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-5 h-5 mr-2"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        Your location helps us to provide location-specific services.
+      </p>
+    </div>
+
+* * *
+
+## Select with Label and Helper Text
+
+Responsive location select dropdown with label and helper text, enhancing user
+experience by providing location-specific options. Perfect for forms and
+interfaces.
+
+Your Country
+
+BrazilBucharestLondonWashington
+
+Your location helps us to provide location-specific services.
+
+    
+    
+    <div class="w-full max-w-sm min-w-[200px]">    
+      <label class="block mb-1 text-sm text-slate-800">
+        Your Country
+      </label>
+     
+      <div class="relative">
+        <select
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+            <option value="brazil">Brazil</option>
+            <option value="bucharest">Bucharest</option>
+            <option value="london">London</option>
+            <option value="washington">Washington</option>
+        </select>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+        </svg>
+      </div>
+      <p class="flex items-center mt-2 text-xs text-slate-500">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-5 h-5 mr-2"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        Your location helps us to provide location-specific services.
+      </p>
+    </div>
+
+* * *
+
+## Select with Auto Width
+
+Responsive auto-width select component with customizable options, ideal for
+forms needing dynamic input fields that adjust to the content size.
+
+How did you hear about us?How can we assist you today?What is your age
+group?Would you like to subscribe to our newsletter?
+
+    
+    
+    <div class="mt-4">
+      <div class="relative inline-block">
+        <select
+          id="dynamicSelect"
+          class="bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-3 pr-8 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer min-w-[50px]"
+          onchange="resizeSelect()"
+        >
+          <option value="brazil">How did you hear about us?</option>
+          <option value="bucharest">How can we assist you today?</option>
+          <option value="london">What is your age group?</option>
+          <option value="washington">Would you like to subscribe to our newsletter?</option>
+        </select>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.2"
+          stroke="currentColor"
+          class="h-5 w-5 ml-1 absolute top-2.5 right-2.5 text-slate-700 pointer-events-none"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"
+          />
+        </svg>
+      </div>
+    </div>
+     
+    <script>
+      function resizeSelect() {
+        const select = document.getElementById('dynamicSelect');
+        const selectedText = select.options[select.selectedIndex].text;
+        const tempDiv = document.createElement('div');
+     
+        // Temporary div to calculate the width of the selected text
+        tempDiv.style.position = 'absolute';
+        tempDiv.style.visibility = 'hidden';
+        tempDiv.style.whiteSpace = 'nowrap';
+        tempDiv.style.fontSize = window.getComputedStyle(select).fontSize;
+        tempDiv.innerText = selectedText;
+     
+        document.body.appendChild(tempDiv);
+        select.style.width = tempDiv.offsetWidth + 40 + 'px'; // Adjust the additional width for padding and icon space
+        document.body.removeChild(tempDiv);
+      }
+     
+      // Initial call to resize the select box to the default selected option
+      document.addEventListener('DOMContentLoaded', resizeSelect);
+    </script>
+     
+
+* * *
+
+## Explore More Tailwind CSS Examples
+
+Looking for more select component examples? Check out our **[Ecommerce
+Sections](https://www.material-tailwind.com/blocks/ecommerce-sections)** from
+[Material Tailwind Blocks](https://www.material-tailwind.com/blocks).
+
+
+

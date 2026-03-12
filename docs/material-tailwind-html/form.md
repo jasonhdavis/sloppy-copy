@@ -1,0 +1,287 @@
+### Form
+
+
+Easily create forms using our component examples based on Tailwind CSS.
+
+Forms are essential user interface design elements, providing users with the
+means to enter non-standardized responses. A form typically includes various
+elements such as text fields, checkboxes, radio buttons, dropdown lists, and
+buttons, among others. These components are used to create forms where users
+can enter data, such as during registration, login, search queries, feedback
+submission, or any other situation where user input is required.
+
+See below our form component examples.
+
+  
+
+## Form Examples:
+
+## Simple Registration (Sign up) Form
+
+Use this example if you want to create a user-friendly and responsive sign-up
+form. The input fields use classes for styling, such as `rounded-md`,
+`border`, `bg-transparent`, and `text-sm`, to create a cohesive look. The use
+of placeholder text in the input fields guides the user on what information to
+enter.
+
+#### Sign Up
+
+Nice to meet you! Enter your details to register.
+
+Your Name
+
+Email
+
+Password
+
+Remember Me
+
+Sign Up
+
+Don't have an account?Sign up
+
+    
+    
+    <div class="relative flex flex-col rounded-xl bg-transparent">
+      <h4 class="block text-xl font-medium text-slate-800">
+        Sign Up
+      </h4>
+      <p class="text-slate-500 font-light">
+        Nice to meet you! Enter your details to register.
+      </p>
+      <form class="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+        <div class="mb-1 flex flex-col gap-6">
+          <div class="w-full max-w-sm min-w-[200px]">
+            <label class="block mb-2 text-sm text-slate-600">
+              Your Name
+            </label>
+            <input type="text" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Name" />
+          </div>
+          <div class="w-full max-w-sm min-w-[200px]">
+            <label class="block mb-2 text-sm text-slate-600">
+              Email
+            </label>
+            <input type="email" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Email" />
+          </div>
+          <div class="w-full max-w-sm min-w-[200px]">
+            <label class="block mb-2 text-sm text-slate-600">
+              Password
+            </label>
+            <input type="password" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Password" />
+          </div>
+        </div>
+        <div class="inline-flex items-center mt-2">
+          <label class="flex items-center cursor-pointer relative" for="check-2">
+            <input type="checkbox" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="check-2" />
+            <span class="absolute text-white opacity-0 pointer-events-none peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </span>
+          </label>
+          <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-2">
+            Remember Me
+          </label>
+        </div>
+        <button class="mt-4 w-full rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+          Sign Up
+        </button>
+        <p class="flex justify-center mt-6 text-sm text-slate-600">
+          Don&apos;t have an account?
+          <a href="#signup" class="ml-1 text-sm font-semibold text-slate-700 underline">
+            Sign up
+          </a>
+        </p>
+      </form>
+    </div>
+
+The sign-up button is styled with a solid background color, text styling, and
+hover effects to encourage user interaction. Also, the form provides a link
+for users who already have an account to sign in, ensuring easy navigation
+between different user states (e.g., new registration vs. existing user).
+
+* * *
+
+## Checkout Form
+
+This example showcases a payment form interface designed with HTML and styled
+using Tailwind CSS. This checkout form is a must for your website's checkout
+process.
+
+##### Material Tailwind PRO
+
+  * Pay with Card
+  * Pay with PayPal
+
+Email
+
+Card Details
+
+Expiration Date
+
+CVV
+
+Holder NamePay Now
+
+Payments are secure and encrypted
+
+    
+    
+    <div class="relative flex w-full max-w-[24rem] flex-col rounded-lg bg-white border border-slate-200 shadow-sm">
+      <div class="relative m-2.5 items-center flex flex-col justify-center text-white h-32 rounded-md bg-slate-800">
+        <div class="mb-4 text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+            class="h-10 w-10 text-white"
+          >
+            <path d="M4.5 3.75a3 3 0 00-3 3v.75h21v-.75a3 3 0 00-3-3h-15z"></path>
+            <path
+              fill-rule="evenodd"
+              d="M22.5 9.75h-21v7.5a3 3 0 003 3h15a3 3 0 003-3v-7.5zm-18 3.75a.75.75 0 01.75-.75h6a.75.75 0 010 1.5h-6a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <h5 class="text-white text-xl">
+          Material Tailwind PRO
+        </h5>
+      </div>
+      <div class="p-6">
+        <div class="block overflow-visible">
+          <div class="w-full">
+            <div class="relative right-0">
+              <ul class="relative flex flex-wrap px-1.5 py-1.5 list-none rounded-md bg-slate-100" data-tabs="tabs" role="tablist">
+                <li class="z-30 flex-auto text-center">
+                  <a class="z-30 flex items-center justify-center w-full px-0 py-2 text-sm mb-0 transition-all ease-in-out border-0 rounded-md cursor-pointer text-slate-600 bg-inherit"
+                  data-tab-target="" role="tab" aria-selected="true">
+                    Pay with Card
+                  </a>
+                </li>
+                <li class="z-30 flex-auto text-center">
+                  <a class="z-30 flex items-center justify-center w-full px-0 py-2 mb-0 text-sm transition-all ease-in-out border-0 rounded-lg cursor-pointer text-slate-600 bg-inherit"
+                  data-tab-target="" role="tab" aria-selected="false">
+                    Pay with PayPal
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div> 
+          <div class="relative block w-full overflow-hidden !overflow-x-hidden !overflow-y-visible bg-transparent">
+            <div
+              role="tabpanel"
+              data-value="card"
+            >
+              <form class="mt-8 flex flex-col">
+                <div class="w-full max-w-sm min-w-[200px]">
+                  <label class="block mb-2 text-sm text-slate-600">
+                    Email
+                  </label>
+                  <input type="email" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Email" />
+                </div>
+     
+                <label class="block mb-1 text-sm text-slate-600 mt-4">
+                  Card Details
+                </label>
+                <input
+                  type="text"
+                  class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-3 pr-20 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                  placeholder="1234 5678 9012 3456"
+                />
+     
+                <div class="flex">
+                  <div class="w-full md:w-8/12 mr-4">
+                    <label class="block mb-1 text-sm text-slate-600 mt-4">
+                      Expiration Date
+                    </label>
+                    <input
+                      type="text"
+                      class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-3 pr-20 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                      placeholder="MM/YY"
+                    />
+                  </div>
+                  <div class="w-full md:w-4/12">
+                    <label class="block mb-1 text-sm text-slate-600 mt-4">
+                      CVV
+                    </label>
+                    <input
+                      type="text"
+                      class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                      placeholder="123"
+                    />
+                  </div>
+                </div>
+     
+                <label class="mt-4 block mb-1 text-sm text-slate-600">
+                  Holder Name
+                </label>
+                <input
+                  type="text"
+                  class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-3 pr-20 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+                  placeholder="e.g John Doe"
+                />
+     
+                
+                <button class="w-full mt-6 rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">Pay Now</button>
+                <p class="mt-4 flex items-center justify-center gap-2 text-sm text-slate-500 font-light">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                    class="-mt-0.5 h-4 w-4"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Payments are secure and encrypted
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+The form's input fields for email, card details, expiration date, CVC, and
+cardholder name are carefully styled for readability and usability. Each field
+has rounded borders, a subtle background color on focus, and placeholder text
+to guide input. The design uses labels and custom icons to visually enhance
+the user experience and ensure clarity.
+
+* * *
+
+## Explore More Tailwind CSS Examples
+
+Check out more form examples from [Material Tailwind
+Blocks](https://www.material-tailwind.com/blocks):
+
+## • [Web 3.0 Login Blocks](https://www.material-tailwind.com/blocks/login)  
+• [Account Blocks](https://www.material-tailwind.com/blocks/account)  
+• [Authentification Blocks](https://www.material-
+tailwind.com/blocks/authentication)  
+• [Contact Us Blocks](https://www.material-tailwind.com/blocks/contact-
+sections)  
+
+## Form Best Practices for Developers
+
+• Minimize the number of fields to reduce user effort and avoid overwhelming
+them with too many options or complex instructions.  
+• Ensure that every input field has a corresponding label that clearly
+describes its purpose.  
+• Implement client-side validation to provide immediate feedback on errors or
+success.  
+• Consider the size and spacing of form elements to ensure they are easily
+clickable on touch screens.  
+• Enable autofill and autocomplete functionalities to speed up the form
+filling process.
+
+
+

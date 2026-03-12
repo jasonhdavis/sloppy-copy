@@ -1,0 +1,626 @@
+### Checkbox
+
+
+Get started on your web projects with our Tailwind CSS checkbox which is an
+input control that allows the user to select one or more items from a set. You
+can use a checkbox for:
+
+• Selecting one or more options from a list  
+• Presenting a list containing sub-selections  
+• Turning an item on/off in a desktop environment (If you have a single
+option, avoid using a checkbox and use an on/off checkbox instead)
+
+See below our easy-to-use checkbox component that you can use for your
+Tailwind CSS project.
+
+  
+
+## Checkbox Examples:
+
+## Default Checkbox
+
+Use this simple and versatile checkbox example for your forms or other
+components. You can customize the styling and behavior of the checkbox further
+to fit the specific requirements.
+
+    
+    
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="check" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </label>
+    </div> 
+
+* * *
+
+## Checkbox Colors
+
+You can customize your Material Tailwind checkbox to fit your design with
+different colors like blue, red, amber, green, teal, indigo, purple, and pink.
+
+    
+    
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-blue-600 checked:border-blue-600" id="check1" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-red-600 checked:border-red-600" id="check2" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-amber-600 checked:border-amber-600" id="check3" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-green-600 checked:border-green-600" id="check4" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-teal-600 checked:border-teal-600" id="check5" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-indigo-600 checked:border-indigo-600" id="check6" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-purple-600 checked:border-purple-600" id="check7" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-pink-600 checked:border-pink-600" id="check8" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+
+* * *
+
+## Checkbox with Label
+
+Use this example if you want to offer users the option to "Remember Me" when
+logging in. Or you can customize the text for the desired action.
+
+Remember Me
+
+    
+    
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative" for="check-2">
+        <input type="checkbox"
+          checked
+          class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+          id="check-2" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+            stroke="currentColor" stroke-width="1">
+            <path fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </label>
+      <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-2">
+        Remember Me
+      </label>
+    </div>
+
+* * *
+
+## Checkbox Ripple Effect
+
+Use this example in your web project when you want to provide users with the
+option to enable or disable a "Ripple Effect". This effect is often used to
+provide visual feedback when users interact with buttons or clickable
+elements, giving them a sense of responsiveness.
+
+Ripple Effect On
+
+Ripple Effect Off
+
+    
+    
+    <div class="inline-flex items-center">
+      <label
+        class="relative flex cursor-pointer items-center rounded-full p-3"
+        for="ripple-on"
+        data-ripple-dark="true"
+      >
+        <input
+          id="ripple-on"
+          type="checkbox"
+          class="peer relative h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 shadow hover:shadow-md transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity checked:border-slate-800 checked:bg-slate-800 checked:before:bg-slate-400 hover:before:opacity-10"
+        />
+        <span class="pointer-events-none absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 text-white opacity-0 transition-opacity peer-checked:opacity-100">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-3.5 w-3.5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </span>
+      </label>
+      <label class="cursor-pointer text-slate-600 text-sm"
+        for="ripple-on"
+      >
+        Ripple Effect On
+      </label>
+    </div>
+     
+    <div class="inline-flex items-center ml-3.5">
+      <label class="flex items-center cursor-pointer relative" for="ripple-off">
+        <input type="checkbox"
+          class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+          id="ripple-off" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+            stroke="currentColor" stroke-width="1">
+            <path fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </label>
+      <label class="cursor-pointer ml-3 text-slate-600 text-sm" for="check-ripple-off">
+        Ripple Effect Off
+      </label>
+    </div>
+
+* * *
+
+## Checkbox Custom Icon
+
+Check out this component example to see how you can implement a custom icon
+for your checkbox.
+
+    
+    
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input checked type="checkbox" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="check-custom-icon" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5">
+            <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+          </svg>
+        </span>
+      </label>
+    </div>
+
+* * *
+
+## Disabled Checkbox
+
+Use this component example styled with Tailwind CSS if you want to display a
+checkbox that represents an option but don't want users to interact with it.
+
+Remember Me
+
+    
+    
+    <div class="inline-flex items-center pointer-events-none">
+      <label class="flex items-center cursor-pointer relative" for="check-disabled">
+        <input type="checkbox"
+          disabled
+          class="peer h-5 w-5 cursor-pointer transition-all disabled:opacity-50 appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+          id="check-disabled" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+            stroke="currentColor" stroke-width="1">
+            <path fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </label>
+      <label class="cursor-pointer ml-2 text-slate-600 text-sm opacity-50" for="check-disabled">
+        Remember Me
+      </label>
+    </div>
+
+* * *
+
+## Checkbox with Link
+
+This example works perfectly if you want to make sure that users agree to your
+website's terms and conditions before signing up. Or you can just customize
+the text for your specific needs. It is designed for usability and clarity in
+consent-related scenarios.
+
+I agree with the terms and conditions.
+
+    
+    
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative" for="check-with-link">
+        <input type="checkbox"
+          checked
+          class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+          id="check-with-link" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+            stroke="currentColor" stroke-width="1">
+            <path fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </label>
+      <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-with-link">
+        <p>
+          I agree with the
+          <a
+            href="#"
+            class="font-medium hover:text-slate-800 underline"
+          >
+            terms and conditions
+          </a>
+          .
+        </p>
+      </label>
+    </div>
+
+* * *
+
+## Checkbox With Description
+
+Use the example below for a more complex usage of a checkbox with a label that
+contains some description. It helps clearly communicate the purpose of the
+checkbox.
+
+Remember Me
+
+You'll be able to login without password for 24 hours.
+
+    
+    
+    <div class="inline-flex items-start">
+      <label class="flex items-start cursor-pointer relative" for="check-with-description">
+        <input type="checkbox"
+          checked
+          class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+          id="check-with-description" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+            stroke="currentColor" stroke-width="1">
+            <path fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"></path>
+          </svg>
+        </span>
+      </label>
+      <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-with-description">
+        <div>
+          <p class="font-medium">
+            Remember Me
+          </p>
+          <p class="text-slate-500">
+            You&apos;ll be able to login without password for 24 hours.
+          </p>
+        </div>
+      </label>
+    </div>
+
+* * *
+
+## Checkbox Vertical List Group
+
+Use the example below for a vertical list of checkboxes.
+
+React
+
+Vue.js
+
+Svelte.js
+
+    
+    
+    <div class="relative flex flex-col rounded-xl bg-white shadow">
+      <nav class="flex min-w-[240px] flex-col gap-1 p-2">
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="check-vertical-list-group"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group">
+                <input type="checkbox"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                  id="check-vertical-list-group" />
+                <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                    stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-vertical-list-group">
+                React
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="check-vertical-list-group2"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group2">
+                <input type="checkbox"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                  id="check-vertical-list-group2" />
+                <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                    stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-vertical-list-group2">
+                Vue.js
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="check-vertical-list-group3"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group3">
+                <input type="checkbox"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                  id="check-vertical-list-group3" />
+                <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                    stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-vertical-list-group3">
+                Svelte.js
+              </label>
+            </div>
+          </label>
+        </div>
+      </nav>
+    </div>
+
+* * *
+
+## Checkbox Horizontal List Group
+
+Use the example below for a horizontal list of checkboxes.
+
+React
+
+Vue.js
+
+Svelte.js
+
+    
+    
+    <div class="relative max-w-sm flex w-full flex-col rounded-xl bg-white shadow">
+      <nav class="flex min-w-[240px] flex-row gap-1 p-2">
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="check-vertical-list-group4"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group4">
+                <input type="checkbox"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                  id="check-vertical-list-group4" />
+                <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                    stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-vertical-list-group4">
+                React
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="check-vertical-list-group5"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group5">
+                <input type="checkbox"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                  id="check-vertical-list-group5" />
+                <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                    stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-vertical-list-group5">
+                Vue.js
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="check-vertical-list-group6"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="flex items-center cursor-pointer relative" for="check-vertical-list-group6">
+                <input type="checkbox"
+                  class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800"
+                  id="check-vertical-list-group6" />
+                <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+                    stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label class="cursor-pointer ml-2 text-slate-600 text-sm" for="check-vertical-list-group6">
+                Svelte.js
+              </label>
+            </div>
+          </label>
+        </div>
+      </nav>
+    </div>
+
+* * *
+
+## Checkbox Custom Styles
+
+You can use the classes to add custom styles to the Checkbox component.
+
+    
+    
+    <div class="inline-flex items-center">
+      <label class="flex items-center cursor-pointer relative">
+        <input defaultChecked type="checkbox" class="peer h-6 w-6 cursor-pointer transition-all appearance-none rounded-full bg-slate-100 shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="check-custom-style" />
+        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        </span>
+      </label>
+    </div>
+
+* * *
+
+## Required Scrips
+
+The checkbox component needs a required script file for the ripple effect to
+work, you just need to add the below script file to the bottom of your html
+file.
+
+    
+    
+    <!-- from node_modules -->
+    <script src="node_modules/@material-tailwind/html@latest/scripts/ripple.js"></script>
+     
+    <!-- from cdn -->
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+
+* * *
+
+## Explore More Tailwind CSS Examples
+
+Looking for more checkbox examples? Check out our **[Product List
+Sections](https://www.material-tailwind.com/blocks/product-list-sections)**
+from [Material Tailwind Blocks](https://www.material-tailwind.com/blocks).
+
+* * *
+
+
+• Always use the `<input type="checkbox">` element for checkboxes. It provides
+semantic meaning and ensures compatibility with assistive technologies.  
+• Use clear and descriptive labels for checkboxes. The label should clearly
+explain what the checkbox does or what option it represents.  
+• If there are multiple checkboxes related to a single choice or category,
+group them using fieldsets and legends.  
+• Ensure that checkboxes are touch-friendly for mobile users.  
+• If checkboxes are part of a form with validation, provide clear error
+messages when required checkboxes are not selected.
+
+
+

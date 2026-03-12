@@ -1,0 +1,719 @@
+### Radio Button
+
+
+Our Tailwind CSS radio button component will let your users choose only one of
+a predefined set of mutually exclusive options.
+
+Radio buttons are circular and typically appear in groups; when a user selects
+one radio button in a group, any previously selected radio button in the same
+group is automatically deselected. This behavior makes sure that the user can
+choose only one option from the group, making radio buttons ideal for choices
+where only one option is applicable.
+
+Use the following example to create simple radio buttons for your projects.
+
+  
+
+## Radio Button Examples:
+
+## Simple Radio Button with Text
+
+The example features two radio buttons, labeled "HTML" and "React", allowing
+users to select one of these two options.
+
+HTML
+
+React
+
+    
+    
+    <div class="flex gap-10">
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="html">
+          <input name="framework" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all" id="html">
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          </span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="html">HTML</label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="react">
+          <input name="framework" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all" id="react" checked="">
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          </span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="react">React</label>
+      </div>
+    </div>
+
+* * *
+
+## Radio Colors
+
+This example showcases a set of custom-styled radio buttons designed for
+selecting colors, with options for black, gray, blue, green, red, amber, and a
+disabled state for purple.
+
+    
+    
+    <div class="flex gap-10">
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="slate-800">
+          <input
+            name="color"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="slate-800"
+            checked
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="slate-400">
+          <input
+            name="color"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="slate-400"
+          />
+          <span class="absolute bg-slate-400 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="blue-600">
+          <input
+            name="color"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-blue-400 transition-all"
+            id="blue-600"
+          />
+          <span class="absolute bg-blue-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="green-600">
+          <input
+            name="color"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-green-400 transition-all"
+            id="green-600"
+          />
+          <span class="absolute bg-green-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="red-600">
+          <input
+            name="color"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-red-400 transition-all"
+            id="red-600"
+          />
+          <span class="absolute bg-red-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="amber-600">
+          <input
+            name="color"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-amber-400 transition-all"
+            id="amber-600"
+          />
+          <span class="absolute bg-amber-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="purple-600">
+          <input
+            name="color"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-purple-400 transition-all"
+            id="purple-600"
+          />
+          <span class="absolute bg-purple-600 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+      </div>
+    </div>
+
+* * *
+
+## Radio Ripple Effect
+
+The radio button component example provides visual feedback when the user
+interacts with the radio buttons, such as hovering or selecting an option.
+This interaction enhances the user experience by making the interface feel
+more responsive and dynamic.
+
+Ripple Effect On
+
+Ripple Effect Off
+
+    
+    
+    <div class="flex gap-10">
+      <div class="inline-flex items-center">
+        <label
+          class="relative flex cursor-pointer items-center rounded-full p-3"
+          for="on"
+          data-ripple-dark="true"
+        >
+          <input
+            name="ripple"
+            type="radio"
+            class="before:content[''] peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity hover:before:opacity-10"
+            id="on"
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label
+          class="text-slate-600 cursor-pointer text-sm"
+          for="on"
+        >
+          Ripple Effect On
+        </label>
+      </div>
+      <div class="inline-flex items-center">
+        <label
+          class="relative flex cursor-pointer items-center rounded-full p-3"
+          for="off"
+        >
+          <input
+            name="ripple"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="off"
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label
+          class="text-slate-600 cursor-pointer text-sm"
+          for="off"
+        >
+          Ripple Effect Off
+        </label>
+      </div>
+    </div>
+
+* * *
+
+## Radio Button Disabled
+
+Both radio buttons are explicitly marked as disabled using the disabled
+attribute on the `<input>` elements. This attribute prevents users from being
+able to select these options, making sure the form behaves correctly in
+contexts where "HTML" and "React" options should not be selectable.
+
+HTML
+
+React
+
+    
+    
+    <div class="flex gap-10">
+      <div class="inline-flex items-center pointer-events-none">
+        <label class="relative flex items-center cursor-pointer" for="html-disabled">
+          <input
+            disabled
+            name="framework"
+            type="radio"
+            class="peer disabled:opacity-50 h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="html-disabled"
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm opacity-50" for="html-disabled">
+          HTML
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center pointer-events-none">
+        <label class="relative flex items-center cursor-pointer" for="react-disabled">
+          <input
+            disabled
+            name="framework"
+            type="radio"
+            class="peer disabled:opacity-50 h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="react-disabled"
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm opacity-50" for="react-disabled">
+          React
+        </label>
+      </div>
+    </div>
+
+* * *
+
+## Radio Button with Link
+
+This example showcases how you can implement radio buttons with labels that
+includes a hyperlink.
+
+I agree with HTML terms and conditions.
+
+I agree with React terms and conditions.
+
+    
+    
+    <div class="flex flex-col gap-10">
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="html-link">
+          <input
+            name="framework"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="html-link"
+            checked
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="html-link">
+          <p>
+            I agree with HTML&nbsp;
+            <a
+              href="#"
+              class="font-medium hover:text-slate-800 underline"
+            >
+              terms and conditions
+            </a>
+            .
+          </p>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="react-link">
+          <input
+            name="framework"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="react-link"
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="react-link">
+          <p>
+            I agree with React&nbsp;
+            <a
+              href="#"
+              class="font-medium hover:text-slate-800 underline"
+            >
+              terms and conditions
+            </a>
+            .
+          </p>
+        </label>
+      </div>
+    </div>
+
+* * *
+
+## Radio Button with Description
+
+This example presents a radio button example that incorporates detailed
+descriptions. This is a more complex and informative approach to presenting
+radio button options.
+
+HTML Version
+
+@material-tailwind/html, packed with rich components and widgets.
+
+React Version
+
+@material-tailwind/react, packed with rich components and widgets.
+
+    
+    
+    <div class="flex flex-col gap-10">
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="html-description">
+          <input
+            name="framework"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="html-description"
+            checked
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="html-description">
+          <div>
+            <p class="font-medium">
+              HTML Version
+            </p>
+            <p class="text-slate-500">
+              @material-tailwind/html, packed with rich components and widgets.
+            </p>
+          </div>
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="react-description">
+          <input
+            name="framework"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+            id="react-description"
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="react-description">
+          <div>
+            <p class="font-medium">
+              React Version
+            </p>
+            <p class="text-slate-500">
+              @material-tailwind/react, packed with rich components and widgets.
+            </p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+* * *
+
+## Radio Button Custom Icon
+
+This example presents a radio button example that incorporates detailed
+descriptions. This is a more complex and informative approach to presenting
+radio button options.
+
+HTML
+
+React
+
+    
+    
+    <div class="flex gap-10">
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="html-custom-icon">
+          <input
+            name="framework-custom-icon"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-800 transition-all"
+            id="html-custom-icon"
+            checked
+          />
+          <span class="absolute w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-2 left-2 transform -translate-x-1/2 -translate-y-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z" />
+            </svg>
+          </span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="html-custom-icon">
+          HTML
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="react-custom-icon">
+          <input
+            name="framework-custom-icon"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-800 transition-all"
+            id="react-custom-icon"
+          />
+          <span class="absolute w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-2 left-2 transform -translate-x-1/2 -translate-y-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path d="M2 6.342a3.375 3.375 0 0 1 6-2.088 3.375 3.375 0 0 1 5.997 2.26c-.063 2.134-1.618 3.76-2.955 4.784a14.437 14.437 0 0 1-2.676 1.61c-.02.01-.038.017-.05.022l-.014.006-.004.002h-.002a.75.75 0 0 1-.592.001h-.002l-.004-.003-.015-.006a5.528 5.528 0 0 1-.232-.107 14.395 14.395 0 0 1-2.535-1.557C3.564 10.22 1.999 8.558 1.999 6.38L2 6.342Z" />
+            </svg>
+          </span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="react-custom-icon">
+          React
+        </label>
+      </div>
+    </div>
+
+* * *
+
+## Radio Button Vertical List Group
+
+This example represents a navigation menu implemented as a vertical list of
+radio button options. The use of `hover:bg-blue-gray-50`, `focus:bg-blue-
+gray-50`, and `active:bg-blue-gray-50` (along with corresponding opacity and
+text color changes) makes sure that users receive immediate visual feedback as
+they interact with the menu.
+
+React.js
+
+Vue.js
+
+Svelte.js
+
+    
+    
+    <div class="relative flex flex-col rounded-xl bg-white shadow">
+      <nav class="flex min-w-[240px] flex-col gap-1 p-2">
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="react-vertical"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="relative flex items-center cursor-pointer" for="react-vertical">
+                <input
+                  name="framework"
+                  type="radio"
+                  class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                  id="react-vertical"
+                  checked
+                />
+                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+              </label>
+              <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="react-vertical">
+                React.js
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="vue-vertical"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="relative flex items-center cursor-pointer" for="vue-vertical">
+                <input
+                  name="framework"
+                  type="radio"
+                  class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                  id="vue-vertical"
+                />
+                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+              </label>
+              <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="vue-vertical">
+                Vue.js
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="svelte-vertical"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="relative flex items-center cursor-pointer" for="svelte-vertical">
+                <input
+                  name="framework"
+                  type="radio"
+                  class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                  id="svelte-vertical"
+                />
+                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+              </label>
+              <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="svelte-vertical">
+                Svelte.js
+              </label>
+            </div>
+          </label>
+        </div>
+      </nav>
+    </div>
+
+* * *
+
+## Radio Button Horizontal List Group
+
+Use the example below to implement horizontal list of radio buttons. The
+horizontal layout of the radio buttons makes this design ideal for use cases
+where navigation options need to be compactly presented side by side, such as
+in a header or toolbar.
+
+React.js
+
+Vue.js
+
+Svelte.js
+
+    
+    
+    <div class="relative max-w-sm flex w-full flex-col rounded-xl bg-white shadow">
+      <nav class="flex min-w-[240px] flex-row gap-1 p-2">
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="react-horizontal"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="relative flex items-center cursor-pointer" for="react-horizontal">
+                <input
+                  name="framework-horizontal"
+                  type="radio"
+                  class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                  id="react-horizontal"
+                  checked
+                />
+                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+              </label>
+              <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="react-horizontal">
+                React.js
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="vue-horizontal"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="relative flex items-center cursor-pointer" for="vue-horizontal">
+                <input
+                  name="framework-horizontal"
+                  type="radio"
+                  class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                  id="vue-horizontal"
+                />
+                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+              </label>
+              <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="vue-horizontal">
+                Vue.js
+              </label>
+            </div>
+          </label>
+        </div>
+        <div
+          role="button"
+          class="flex w-full items-center rounded-lg p-0 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"
+        >
+          <label
+            for="svelte-horizontal"
+            class="flex w-full cursor-pointer items-center px-3 py-2"
+          >
+            <div class="inline-flex items-center">
+              <label class="relative flex items-center cursor-pointer" for="svelte-horizontal">
+                <input
+                  name="framework-horizontal"
+                  type="radio"
+                  class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                  id="svelte-horizontal"
+                />
+                <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+              </label>
+              <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="svelte-horizontal">
+                Svelte.js
+              </label>
+            </div>
+          </label>
+        </div>
+      </nav>
+    </div>
+
+* * *
+
+## Radio Button Custom Styles
+
+Check out the example below for implementing custom styles on your radio
+button component.
+
+HTML
+
+React
+
+    
+    
+    <div class="flex flex-col gap-10">
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="html-custom">
+          <input
+            name="framework-custom"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-200 bg-slate-100 checked:border-slate-300 transition-all"
+            id="html-custom"
+            checked
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="html-custom">
+          HTML
+        </label>
+      </div>
+     
+      <div class="inline-flex items-center">
+        <label class="relative flex items-center cursor-pointer" for="react-custom">
+          <input
+            name="framework-custom"
+            type="radio"
+            class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-200 bg-slate-100 checked:border-slate-300 transition-all"
+            id="react-custom"
+          />
+          <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+        </label>
+        <label class="ml-2 text-slate-600 cursor-pointer text-sm" for="react-custom">
+          React
+        </label>
+      </div>
+    </div>
+
+* * *
+
+## Required Scrips
+
+The radio component needs a required script file for ripple effect to work,
+you just need to add the below script file to the bottom of your html file.
+
+    
+    
+    <!-- from node_modules -->
+    <script src="node_modules/@material-tailwind/html@latest/scripts/ripple.js"></script>
+     
+    <!-- from cdn -->
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+
+* * *
+
+## Explore More Tailwind CSS Examples
+
+Looking for more radio button examples? Check out our **[Contact
+Sections](https://www.material-tailwind.com/blocks/contact-sections)** from
+[Material Tailwind Blocks](https://www.material-tailwind.com/blocks).
+
+* * *
+
+## Explore More Tailwind CSS Examples
+
+Looking for more radio button examples? Check out our **[Contact
+Sections](https://www.material-tailwind.com/blocks/contact-sections)** from
+[Material Tailwind Blocks](https://www.material-tailwind.com/blocks).
+
+* * *
+
+## Radio Buttons Best Practices for Developers
+
+• Radio buttons are best used for mutually exclusive choices within a group.  
+• Each radio button should have a concise and descriptive label that clearly
+indicates what the option represents.  
+• Utilize CSS to provide visual feedback for different states such as hover,
+focus, and selected.  
+• Avoid using radio buttons for yes/no choices.
+
+
+

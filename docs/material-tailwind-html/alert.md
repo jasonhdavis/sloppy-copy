@@ -1,0 +1,353 @@
+### Alert
+
+
+Get started on your web projects with our Tailwind CSS alert which provides
+contextual feedback messages for typical user actions.
+
+An alert displays a short and important message attracting the user's
+attention without interrupting the user's task. Use this element when you need
+to show highly-important messages to users or when you need a persistent
+static container that is closable by user actions.
+
+Below we are presenting examples of alerts that you can use in your Tailwind
+CSS project. The examples come in different colors and styles so you can adapt
+them easily to your needs.
+
+  
+
+## Alert Examples:
+
+## Simple Alert
+
+This example of alert with white text and dark gray background creates a high
+contrast ratio that improves readability and attracts attention.
+
+A simple alert for showing message.
+
+    
+    
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-slate-800 rounded-md">
+      A simple filled alert for showing message.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+* * *
+
+## Alert Variants
+
+The alert component comes with 3 different variants that you can change using
+the gradient classes.
+
+A simple filled alert for showing message.
+
+A simple filled alert for showing message.
+
+A simple gradient alert for showing message.
+
+A simple outlined alert for showing message.
+
+A simple ghost alert for showing message.
+
+    
+    
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-slate-800 rounded-md">
+      A simple filled alert for showing message.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+     
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-slate-800 rounded-md">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
+      A simple filled alert for showing message.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+     
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-gradient-to-tr from-slate-800 to-slate-700 rounded-md">
+      A simple gradient alert for showing message.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+     
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-slate-600 border border-slate-300 rounded-lg font-regular">
+      A simple outlined alert for showing message.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-slate-100 active:bg-slate-100 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-slate-600" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+     
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-slate-600 rounded-md bg-slate-100">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>    
+      A simple ghost alert for showing message.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-slate-200 active:bg-slate-200 absolute top-1.5 right-1.5" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-slate-600" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+* * *
+
+## Alert Colors
+
+The alert component comes with 19 different colors that you can change using
+the color classes, below you can find some of the available colors.
+
+An info alert for showing message.
+
+An red alert for showing message.
+
+An success alert for showing message.
+
+An warning alert for showing message.
+
+    
+    
+      <div role="alert" class="mb-4 relative flex w-full p-3 text-sm text-white bg-blue-600 rounded-md">
+        An info alert for showing message.
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div role="alert" class="mb-4 relative flex w-full p-3 text-sm text-white bg-red-600 rounded-md">
+        An red alert for showing message.
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div role="alert" class="mb-4 relative flex w-full p-3 text-sm text-white bg-green-600 rounded-md">
+        An success alert for showing message.
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div role="alert" class="mb-4 relative flex w-full p-3 text-sm text-white bg-orange-600 rounded-md">
+        An warning alert for showing message.
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+* * *
+
+## Alert with Icon
+
+You can add an icon at the beginning of the alert component using the `svg`
+tag.
+
+A simple filled alert for showing message.
+
+    
+    
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-slate-800 rounded-md">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
+        A simple filled alert for showing message.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+* * *
+
+## Alert with List
+
+You can add any element you want for the Alert component, below you can see an
+example of alert with a list inside.
+
+Ensure that these requirements are met:
+
+  * At least 10 characters (and up to 100 characters)
+  * At least one lowercase character
+  * Inclusion of at least one special character, e.g., ! @ # ?
+
+Ensure that these requirements are met:
+
+  * At least 10 characters (and up to 100 characters)
+  * At least one lowercase character
+  * Inclusion of at least one special character, e.g., ! @ # ?
+
+Ensure that these requirements are met:
+
+  * At least 10 characters (and up to 100 characters)
+  * At least one lowercase character
+  * Inclusion of at least one special character, e.g., ! @ # ?
+
+Ensure that these requirements are met:
+
+  * At least 10 characters (and up to 100 characters)
+  * At least one lowercase character
+  * Inclusion of at least one special character, e.g., ! @ # ?
+
+    
+    
+    <div class="flex w-full flex-col gap-2">
+      <div role="alert" class="mt-3 relative flex flex-col w-full p-3 text-sm text-white bg-slate-800 rounded-md">
+        <p class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
+          Ensure that these requirements are met:
+        </p>
+        <ul class="mt-2 ml-7 list-inside list-disc">
+          <li>At least 10 characters (and up to 100 characters)</li>
+          <li>At least one lowercase character</li>
+          <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+        </ul>
+        
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div role="alert" class="mt-3 relative flex flex-col w-full p-3 text-sm text-white bg-gradient-to-tr from-slate-800 to-slate-700 rounded-md">
+        <p class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
+          Ensure that these requirements are met:
+        </p>
+        <ul class="mt-2 ml-7 list-inside list-disc">
+          <li>At least 10 characters (and up to 100 characters)</li>
+          <li>At least one lowercase character</li>
+          <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+        </ul>
+        
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+     
+     
+      <div role="alert" class="mt-3 relative flex flex-col w-full p-3 text-sm text-slate-600 border border-slate-300 rounded-lg font-regular">
+        <p class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
+          Ensure that these requirements are met:
+        </p>
+        <ul class="mt-2 ml-7 list-inside list-disc">
+          <li>At least 10 characters (and up to 100 characters)</li>
+          <li>At least one lowercase character</li>
+          <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+        </ul>
+        
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-slate-100 active:bg-slate-100 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-slate-600" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+     
+      <div role="alert" class="mt-3 relative flex flex-col w-full p-3 text-sm text-slate-600 rounded-md bg-slate-100">
+        <p class="flex">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
+          Ensure that these requirements are met:
+        </p>
+        <ul class="mt-2 ml-7 list-inside list-disc">
+          <li>At least 10 characters (and up to 100 characters)</li>
+          <li>At least one lowercase character</li>
+          <li>Inclusion of at least one special character, e.g., ! @ # ?</li>
+        </ul>
+        
+        <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-slate-200 active:bg-slate-200 absolute top-1.5 right-1.5" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5 text-slate-600" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+    </div>
+
+* * *
+
+## Alert Dismissible
+
+The dismissible alert is a user interface component that displays a message
+with the option to close or hide it. It includes a close button, allowing
+users to easily dismiss the alert by clicking the button, enhancing the user
+experience by keeping the interface clean and free of unnecessary messages.
+Ideal for notifications, warnings, or informational messages that the user can
+manually dismiss.
+
+A dismissible alert with closing button.
+
+    
+    
+    <div role="alert" class="mt-3 relative flex w-full p-3 text-sm text-white bg-slate-800 rounded-md" id="alert">
+      A dismissible alert with closing button.
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button" onclick="closeAlert()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div> 
+     
+    <script>
+      function closeAlert() {
+        const alertElement = document.getElementById('alert');
+        alertElement.style.display = 'none'; // Hides the alert
+      }
+    </script>
+
+* * *
+
+## Custom Alert Close Icon
+
+You can use any DOM element as the alert closing icon.
+
+Sorry, something went wrong please try again.Close
+
+    
+    
+    <div
+      role="alert"
+      class="mt-3 relative flex w-full p-3 text-sm text-white bg-slate-800 rounded-md"
+      id="alert"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+      </svg>
+     
+      Sorry, something went wrong please try again.
+      <button onclick="closeAlert()" class="flex items-center justify-center transition-all px-2 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+        Close
+      </button>
+    </div>
+     
+    <script>
+      function closeAlert() {
+        const alertElement = document.getElementById('alert');
+        alertElement.style.display = 'none'; // Hides the alert
+      }
+    </script>
+
+* * *
+
+## Alert with Content
+
+Use the example below to use an alert component with content elements like
+title and description.
+
+Success
+
+I don't know what that word means. Im happy. But success, that goes back to
+what in somebody's eyes success means. For me, success is inner peace. That's
+a good day for me.
+
+    
+    
+    <div role="alert" class="mt-3 relative flex flex-col w-full p-3 text-sm text-white bg-green-600 rounded-md">
+      <p class="flex text-base">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 mr-2 mt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path></svg>
+        Success
+      </p>
+      <p class="ml-4 p-3">
+        I don&apos;t know what that word means. Im happy. But success, that goes back to what in somebody&apos;s eyes success means. For me, success is inner peace. That&apos;s a good day for me.
+      </p>
+      
+      <button class="flex items-center justify-center transition-all w-8 h-8 rounded-md text-white hover:bg-white/10 active:bg-white/10 absolute top-1.5 right-1.5" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 w-5" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+* * *
+
+## Explore More Tailwind CSS Examples
+
+Looking for more alert examples? Check out our **[banner
+examples](https://www.material-tailwind.com/blocks/banner-sections)** from
+[Material Tailwind Blocks](https://www.material-tailwind.com/blocks).
+
+
+

@@ -1,0 +1,850 @@
+### Dialog
+
+
+Use our Tailwind CSS dialog (also known as modal) component to inform users
+about a task or important information that require decisions, or involves
+multiple tasks.
+
+A dialog is a type of modal window with critical information which disable all
+app functionality when they appear and remains on screen until
+confirmed/dismissed.
+
+See below our modal examples styled with Tailwind CSS that you can use for
+your web or mobile project.
+
+You can initialize a new dialog by adding the `data-dialog-
+target="`{dialog}`"` data attribute to the trigger element, the `data-dialog-
+backdrop="`{dialogName}`"` to the backdrop element and the  
+`data-dialog="`{dialogName}`"` to the dialog element itself and make sure that
+the values for those data attributes are the same.
+
+You can also use the `data-dialog-close="true"` for the element that you want
+to close the dialog with when clicking.
+
+  
+
+## Dialog Examples:
+
+## Default Dialog
+
+This component example includes a button to open the dialog, a backdrop, and
+various styling elements for the dialog's content and buttons. When the "Open
+Dialog" button is clicked, the dialog with its content is displayed on top of
+the backdrop, providing a modal interaction for the user.
+
+Open Dialog
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+    
+    
+    <button 
+      data-dialog-target="dialog"
+      class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+      Open Dialog
+    </button>
+    <div
+      data-dialog-backdrop="dialog"
+      data-dialog-backdrop-close="true"
+      class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+    >
+      <div
+        data-dialog="dialog"
+        class="relative m-4 p-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white shadow-sm"
+      >
+        <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+          Its a simple dialog.
+        </div>
+        <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+          The key to more success is to have a lot of pillows. Put it this
+          way, it took me twenty five years to get these plants, twenty five
+          years of blood sweat and tears, and I&apos;m never giving up,
+          I&apos;m just getting started. I&apos;m up to something. Fan luv.
+        </div>
+        <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+          <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+            Cancel
+          </button>
+          <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+* * *
+
+## Dialog Sizes
+
+You can set the size of the dialog on your own using the Tailwind CSS classes,
+check the examples below for implementation details.
+
+Open Dialog XS
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+Open Dialog SM
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+Open Dialog MD
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+Open Dialog LG
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+Open Dialog XL
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+Open Dialog XXL
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+    
+    
+    <div class="mb-3 flex gap-3">
+      <button 
+        data-dialog-target="dialog-xs"
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+        Open Dialog XS
+      </button>
+      <div
+        data-dialog-backdrop="dialog-xs"
+        data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+      >
+        <div
+          data-dialog="dialog-xs"
+          class="relative m-4 p-4 w-1/4 rounded-lg bg-white shadow-sm"
+        >
+          <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Its a simple dialog.
+          </div>
+          <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+            The key to more success is to have a lot of pillows. Put it this
+            way, it took me twenty five years to get these plants, twenty five
+            years of blood sweat and tears, and I&apos;m never giving up,
+            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          </div>
+          <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Cancel
+            </button>
+            <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <button 
+        data-dialog-target="dialog-sm"
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+        Open Dialog SM
+      </button>
+      <div
+        data-dialog-backdrop="dialog-sm"
+        data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+      >
+        <div
+          data-dialog="dialog-sm"
+          class="relative m-4 p-4 w-1/3 rounded-lg bg-white shadow-sm"
+        >
+          <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Its a simple dialog.
+          </div>
+          <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+            The key to more success is to have a lot of pillows. Put it this
+            way, it took me twenty five years to get these plants, twenty five
+            years of blood sweat and tears, and I&apos;m never giving up,
+            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          </div>
+          <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Cancel
+            </button>
+            <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <button 
+        data-dialog-target="dialog-md"
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+        Open Dialog MD
+      </button>
+      <div
+        data-dialog-backdrop="dialog-md"
+        data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+      >
+        <div
+          data-dialog="dialog-md"
+          class="relative m-4 p-4 w-2/5 rounded-lg bg-white shadow-sm"
+        >
+          <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Its a simple dialog.
+          </div>
+          <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+            The key to more success is to have a lot of pillows. Put it this
+            way, it took me twenty five years to get these plants, twenty five
+            years of blood sweat and tears, and I&apos;m never giving up,
+            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          </div>
+          <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Cancel
+            </button>
+            <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 flex gap-3">
+      <button 
+        data-dialog-target="dialog-lg"
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+        Open Dialog LG
+      </button>
+      <div
+        data-dialog-backdrop="dialog-lg"
+        data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+      >
+        <div
+          data-dialog="dialog-lg"
+          class="relative m-4 p-4 w-3/5 rounded-lg bg-white shadow-sm"
+        >
+          <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Its a simple dialog.
+          </div>
+          <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+            The key to more success is to have a lot of pillows. Put it this
+            way, it took me twenty five years to get these plants, twenty five
+            years of blood sweat and tears, and I&apos;m never giving up,
+            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          </div>
+          <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Cancel
+            </button>
+            <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+     
+      <button 
+        data-dialog-target="dialog-xl"
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+        Open Dialog XL
+      </button>
+      <div
+        data-dialog-backdrop="dialog-xl"
+        data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+      >
+        <div
+          data-dialog="dialog-xl"
+          class="relative m-4 p-4 w-3/4 rounded-lg bg-white shadow-sm"
+        >
+          <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Its a simple dialog.
+          </div>
+          <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+            The key to more success is to have a lot of pillows. Put it this
+            way, it took me twenty five years to get these plants, twenty five
+            years of blood sweat and tears, and I&apos;m never giving up,
+            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          </div>
+          <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Cancel
+            </button>
+            <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+     
+      <button 
+        data-dialog-target="dialog-xxl"
+        class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+        Open Dialog XXL
+      </button>
+      <div
+        data-dialog-backdrop="dialog-xxl"
+        data-dialog-backdrop-close="true"
+        class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+      >
+        <div
+          data-dialog="dialog-xxl"
+          class="relative w-screen h-screen bg-white shadow-sm"
+        >
+          <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+            Its a simple dialog.
+          </div>
+          <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+            The key to more success is to have a lot of pillows. Put it this
+            way, it took me twenty five years to get these plants, twenty five
+            years of blood sweat and tears, and I&apos;m never giving up,
+            I&apos;m just getting started. I&apos;m up to something. Fan luv.
+          </div>
+          <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+            <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Cancel
+            </button>
+            <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+* * *
+
+## Custom Dialog Animation
+
+You can modify the open/close state animation for the modal by adding the
+`data-dialog-mount="`{opacity-100}`"`, `data-dialog-unmount="`{opacity-0}`"`
+and `data-dialog-transition="`{transition-opacity}`"` data attributes to the
+dialog element. You can pass Tailwind CSS classnames for those data attributes
+for animating the dialog. Check more about animation data attributes for
+dialog here.
+
+Open Dialog
+
+Its a simple dialog.
+
+The key to more success is to have a lot of pillows. Put it this way, it took
+me twenty five years to get these plants, twenty five years of blood sweat and
+tears, and I'm never giving up, I'm just getting started. I'm up to something.
+Fan luv.
+
+CancelConfirm
+
+    
+    
+    <button 
+      data-dialog-target="animated-dialog"
+      class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+      Open Dialog
+    </button>
+    <div
+      data-dialog-backdrop="animated-dialog"
+      data-dialog-backdrop-close="true"
+      class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+    >
+      <div
+        data-dialog="animated-dialog"
+        data-dialog-mount="opacity-100 translate-y-0 scale-100"
+        data-dialog-unmount="opacity-0 -translate-y-28 scale-90 pointer-events-none"
+        data-dialog-transition="transition-all duration-300"
+        class="relative m-4 p-4 w-2/5 min-w-[40%] max-w-[40%] rounded-lg bg-white shadow-sm"
+      >
+        <div class="flex shrink-0 items-center pb-4 text-xl font-medium text-slate-800">
+          Its a simple dialog.
+        </div>
+        <div class="relative border-t border-slate-200 py-4 leading-normal text-slate-600 font-light">
+          The key to more success is to have a lot of pillows. Put it this
+          way, it took me twenty five years to get these plants, twenty five
+          years of blood sweat and tears, and I&apos;m never giving up,
+          I&apos;m just getting started. I&apos;m up to something. Fan luv.
+        </div>
+        <div class="flex shrink-0 flex-wrap items-center pt-4 justify-end">
+          <button data-dialog-close="true" class="rounded-md border border-transparent py-2 px-4 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+            Cancel
+          </button>
+          <button data-dialog-close="true" class="rounded-md bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+* * *
+
+## Dialog with Form
+
+Use the example below to create a dialog with a Sign-in form.
+
+Open Dialog
+
+
+Email
+
+Password
+
+Remember Me
+
+Sign In
+
+Don't have an account?Sign up
+
+    
+    
+    <button 
+      data-dialog-target="sign-in-dialog"
+      class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+      Open Dialog
+    </button>
+    <div
+      data-dialog-backdrop="sign-in-dialog"
+      data-dialog-backdrop-close="true"
+      class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+    >
+      <div
+        data-dialog="sign-in-dialog"
+        class="relative mx-auto w-full max-w-[24rem] rounded-lg overflow-hidden shadow-sm"
+      >
+        <div class="relative flex flex-col bg-white">
+          <div class="relative m-2.5 items-center flex justify-center text-white h-24 rounded-md bg-slate-800">
+            <h3 class="text-2xl">
+              Sign In
+            </h3>
+          </div>
+          <div class="flex flex-col gap-4 p-6">
+            <div class="w-full max-w-sm min-w-[200px]">
+                <label class="block mb-2 text-sm text-slate-600">
+                  Email
+                </label>
+                <input type="email" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Email" />
+            </div>
+            
+            <div class="w-full max-w-sm min-w-[200px]">
+              <label class="block mb-2 text-sm text-slate-600">
+                Password
+              </label>
+              <input type="password" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Your Password" />
+            </div>
+        
+            <div class="inline-flex items-center mt-2">
+              <label class="flex items-center cursor-pointer relative" htmlFor="check-2">
+                <input type="checkbox" class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="check-2" />
+                <span class="absolute text-white opacity-0 pointer-events-none peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </span>
+              </label>
+              <label class="cursor-pointer ml-2 text-slate-600 text-sm" htmlFor="check-2">
+                Remember Me
+              </label>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <button class="w-full rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Sign In
+            </button>
+            <p class="flex justify-center mt-6 text-sm text-slate-600">
+              Don&apos;t have an account?
+              <a href="#signup" class="ml-1 text-sm font-semibold text-slate-700 underline">
+                Sign up
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+* * *
+
+## Dialog with Image
+
+Use the example below to create a modal with an image inside (you can find
+your images on Unsplash).
+
+![nature](https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80)
+
+![tania
+andrew](https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80)
+
+Tania Andrew
+
+@andrew
+
+Free Download
+
+![nature](https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80)
+
+Views
+
+44,082,044
+
+Downloads
+
+553,031
+
+Share
+
+    
+    
+    <div
+      class="relative flex h-64 w-96 cursor-pointer flex-col overflow-hidden rounded-lg bg-white bg-clip-border shadow-sm transition-opacity hover:opacity-90"
+      data-dialog-target="image-dialog"
+    >
+      <img
+        alt="nature"
+        class="h-full w-full object-cover object-center"
+        src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2717&amp;q=80"
+      />
+    </div>
+    <div
+      data-dialog-backdrop="image-dialog"
+      data-dialog-backdrop-close="true"
+      class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+    >
+      <div
+        class="relative m-4 w-2/4 rounded-lg bg-white shadow-sm"
+        role="dialog"
+        data-dialog="image-dialog"
+      >
+        <div class="flex items-center justify-between p-4">
+          <div class="flex items-center gap-3">
+            <img
+              alt="tania andrew"
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1480&amp;q=80"
+              class="relative inline-block h-9 w-9 rounded-full object-cover object-center"
+            />
+            <div class="-mt-px flex flex-col">
+              <p class="text-sm text-slate-800 font-medium">
+                Tania Andrew
+              </p>
+              <p class="text-xs font-normal text-slate-500">
+                @andrew
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="rounded-md border border-transparent p-2.5 text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                <path d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z" />
+              </svg>
+            </button>
+            <button class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              Free Download
+            </button>
+          </div>
+        </div>
+        <div class="relative border-b border-t border-b-blue-gray-100 border-t-blue-gray-100 p-0 font-sans text-base font-light leading-relaxed text-blue-gray-500 antialiased">
+          <img
+            alt="nature"
+            class="h-[30rem] w-full object-cover object-center"
+            src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2717&amp;q=80"
+          />
+        </div>
+        <div class="flex shrink-0 flex-wrap items-center justify-between p-4 text-blue-gray-500">
+          <div class="flex items-center gap-16">
+            <div>
+              <p class="text-slate-500 text-sm">
+                Views
+              </p>
+              <p class="text-slate-800 font-medium">
+                44,082,044
+              </p>
+            </div>
+            <div>
+              <p class="text-slate-500 text-sm">
+                Downloads
+              </p>
+              <p class="text-slate-800 font-medium">
+                553,031
+              </p>
+            </div>
+          </div>
+          <button class="flex items-center rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+              class="h-4 w-4 mr-1.5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15.75 4.5a3 3 0 11.825 2.066l-8.421 4.679a3.002 3.002 0 010 1.51l8.421 4.679a3 3 0 11-.729 1.31l-8.421-4.678a3 3 0 110-4.132l8.421-4.679a3 3 0 01-.096-.755z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            Share
+          </button>
+        </div>
+      </div>
+    </div>
+
+* * *
+
+## Web 3.0 Dialog
+
+Use this dialog component for connecting a Web 3.0 wallet in a web
+application. It features a button to open the dialog, a backdrop, wallet
+options, and additional informational elements.
+
+Connect Wallet
+
+##### Connect a Wallet
+
+Choose which card you want to connect
+
+Popular
+
+![metamask](https://docs.material-tailwind.com/icons/metamask.svg)Connect
+Wallet![metamast](https://docs.material-
+tailwind.com/icons/coinbase.svg)Connect with Coinbase
+
+Other
+
+![metamast](https://docs.material-tailwind.com/icons/trust-wallet.svg)Connect
+with Trust Wallet
+
+New to Ethereum wallets?
+
+Learn More
+
+    
+    
+    <button 
+      data-dialog-target="web-3-dialog"
+      class="rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2" type="button">
+      Connect Wallet
+    </button>
+    <div
+      data-dialog-backdrop="web-3-dialog"
+      data-dialog-backdrop-close="true"
+      class="pointer-events-none fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 opacity-0 backdrop-blur-sm transition-opacity duration-300"
+    >
+      <div
+        class="relative m-4 w-1/4 rounded-lg bg-white shadow-sm"
+        data-dialog="web-3-dialog"
+      >
+        <div class="flex items-start justify-between p-4">
+          <div>
+            <h5 class="text-xl font-medium text-slate-800">
+              Connect a Wallet
+            </h5>
+            <p class="text-slate-500 text-sm font-light">
+              Choose which card you want to connect
+            </p>
+          </div>
+          <button
+            data-ripple-dark="true"
+            data-dialog-close="true"
+            class="relative h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-blue-gray-500 transition-all hover:bg-blue-gray-500/10 active:bg-blue-gray-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+          >
+            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="relative px-4">
+          <div class="mb-6">
+            <p class="pt-3 text-xs uppercase text-slate-500">
+              Popular
+            </p>
+            <button class="w-full mt-3 rounded-md flex items-center justify-center border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              <img
+                src="https://docs.material-tailwind.com/icons/metamask.svg"
+                alt="metamask"
+                class="h-5 w-5 mr-2"
+              />
+              Connect Wallet
+            </button>
+     
+            <button class="w-full mt-2 rounded-md flex items-center justify-center border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              <img
+                src="https://docs.material-tailwind.com/icons/coinbase.svg"
+                alt="metamast"
+                class="h-5 w-5 mr-2 rounded-md"
+              />
+              Connect with Coinbase
+            </button>
+          </div>
+          <div>
+            <p class="pt-3 text-xs uppercase text-slate-500">
+              Other
+            </p>
+            <button class="mt-3 w-full rounded-md flex items-center justify-center border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+              <img
+                src="https://docs.material-tailwind.com/icons/trust-wallet.svg"
+                alt="metamast"
+                class="h-5 w-5 rounded-md mr-2 border border-slate-300"
+              />
+              Connect with Trust Wallet
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-2 p-4 text-blue-gray-500 mt-2">
+          <p class="text-sm text-slate-500">
+            New to Ethereum wallets?
+          </p>
+          <button class="rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+* * *
+
+## Dialog Trigger Data Attributes
+
+The following data attributes are available for dialog trigger element.
+
+Attribute| Description  
+---|---  
+`data-dialog-target`| Set the dialog target element, it should be the same as
+the `data-dialog`  
+and `data-dialog-backdrop` data attributes.  
+`data-dialog-close`| It's an optional data attribute, you can set it for any
+element and it will turn the element  
+to a close trigger for dialog when click event happened on that element.  
+  
+* * *
+
+## Dialog Backdrop Data Attributes
+
+The following data attributes are available for dialog backdrop element.
+
+Attribute| Description  
+---|---  
+`data-dialog-backdrop`| Set the dialog backdrop element, it should be the same
+as the `data-dialog`  
+and `data-dialog-target` data attributes.  
+`data-dialog-backdrop-close`| Sets whether to close dialog when clicking on
+it's backdrop or not.  
+  
+* * *
+
+## Dialog Data Attributes
+
+The following data attributes are available for dialog element.
+
+Attribute| Description| Default  
+---|---|---  
+`data-dialog`| Set the name of the dialog and reference it to the  
+dialog trigger and backdrop elements.|  
+`data-popover-mount`| Set the classnaes that should be used when the  
+dialog is visible.| `opacity-1`  
+`translate-y-0`  
+`data-popover-unmount`| Set the classnaes that should be used when the  
+dialog is hidden.| `opacity-0`  
+`-translate-y-14`  
+`pointer-events-none`  
+`data-popover-transition`| Set the classnaes that should be used for  
+transition of the dialog.| `transition-all`  
+`duration-300`  
+  
+* * *
+
+## Required Scripts
+
+The dialog component needs a required script file to work, you just need to
+add the below script file to the bottom of your html file.
+
+    
+    
+    <!-- from node_modules -->
+    <script src="node_modules/@material-tailwind/html@latest/scripts/dialog.js"></script>
+     
+    <!-- from cdn -->
+    <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
+
+* * *
+
+## Explore More Tailwind CSS Examples
+
+Check out more dialog component examples from [Material Tailwind
+Blocks](https://www.material-tailwind.com/blocks):
+
+• [Modals](https://www.material-tailwind.com/blocks/modals)  
+• [Popup Blocks](https://www.material-tailwind.com/blocks/popup-sections)  
+
+* * *
+
+## Modal Best Practices for Developers
+
+• Prioritize user experience by making modals unobtrusive and easy to dismiss.  
+• Include clear and easily accessible close buttons, and allow users to close
+the modal by clicking outside it.  
+• Maintain a consistent design language and layout across modals to create a
+familiar user experience.  
+• Use subtle animations and transitions to open and close modals smoothly.
+Make sure that animations do not distract users.  
+• Implement validation and error handling for form elements within the modal.  
+
+
+
