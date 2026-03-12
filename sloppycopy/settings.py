@@ -130,3 +130,8 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# AI Provider Settings
+import os
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+DEFAULT_AI_MODEL = os.getenv("DEFAULT_AI_MODEL", "anthropic/claude-3-haiku")
