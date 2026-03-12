@@ -37,6 +37,6 @@ The UI should follow the "New York Times (Digital)" aesthetic defined in `STYLE_
 - `python manage.py runserver`
 
 ## Success Criteria
-- [ ] All pages render without template errors.
-- [ ] HTMX buttons on the dashboard trigger backend actions and update the UI.
-- [ ] The UI matches the "credible and authoritative" look of the style guide.
+- [x] All pages render without template errors.
+- [x] HTMX buttons on the dashboard trigger backend actions and update the UI.
+- [x] The UI matches the "credible and authoritative" look of the style guide.
