@@ -24,6 +24,7 @@ class Story(models.Model):
     ai_score = models.FloatField(null=True, blank=True)
     ai_rationale = models.TextField(null=True, blank=True)
     topic_tags = models.JSONField(default=list, blank=True)
+    image_url = models.URLField(null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Stories"

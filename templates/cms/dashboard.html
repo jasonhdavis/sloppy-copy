@@ -1,0 +1,66 @@
+{% extends "cms_base.html" %}
+
+{% block header_title %}Operational Dashboard{% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <!-- Stats Cards -->
+    <div class="bg-white p-6 rounded-xl border border-blue-gray-100 shadow-sm">
+        <p class="text-sm font-medium text-blue-gray-500 uppercase tracking-wider">Total Stories</p>
+        <p class="text-3xl font-bold mt-1">{{ stats.total_stories }}</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl border border-blue-gray-100 shadow-sm">
+        <p class="text-sm font-medium text-blue-gray-500 uppercase tracking-wider">Selected (AI)</p>
+        <p class="text-3xl font-bold mt-1">{{ stats.selected_stories }}</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl border border-blue-gray-100 shadow-sm">
+        <p class="text-sm font-medium text-blue-gray-500 uppercase tracking-wider">Total Rewrites</p>
+        <p class="text-3xl font-bold mt-1">{{ stats.total_rewrites }}</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl border border-blue-gray-100 shadow-sm">
+        <p class="text-sm font-medium text-blue-gray-500 uppercase tracking-wider">Active Authors</p>
+        <p class="text-3xl font-bold mt-1">{{ stats.total_authors }}</p>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <!-- Pipeline Controls -->
+    <div class="bg-white p-8 rounded-xl border border-blue-gray-100 shadow-sm">
+        <h3 class="text-xl font-bold mb-6">Pipeline Controls</h3>
+        <div class="space-y-4">
+            <button hx-post="{% url 'orchestrator:run_pipeline' %}" hx-swap="none" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold uppercase tracking-wide hover:bg-blue-700 transition-colors">
+                Run Full Pipeline
+            </button>
+            <p class="text-sm text-blue-gray-500 text-center">
+                This will ingest feeds, evaluate stories, match authors, and generate rewrites.
+            </p>
+        </div>
+    </div>
+
+    <!-- Latest Run -->
+    <div class="bg-white p-8 rounded-xl border border-blue-gray-100 shadow-sm">
+        <h3 class="text-xl font-bold mb-6">Latest Pipeline Run</h3>
+        {% if latest_run %}
+            <div class="space-y-2">
+                <div class="flex justify-between">
+                    <span class="text-sm font-medium text-blue-gray-500">Status:</span>
+                    <span class="text-sm font-bold uppercase">{{ latest_run.status }}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-sm font-medium text-blue-gray-500">Started:</span>
+                    <span class="text-sm">{{ latest_run.started_at|date:"M d, H:i" }}</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-sm font-medium text-blue-gray-500">Stories Ingested:</span>
+                    <span class="text-sm">{{ latest_run.stories_ingested }}</span>
+                </div>
+            </div>
+            <a href="{% url 'admin:orchestrator_pipelinerun_changelist' %}" class="block mt-6 text-center text-sm font-bold text-blue-600 hover:underline">
+                View Full Logs
+            </a>
+        {% else %}
+            <p class="text-blue-gray-500 italic">No runs recorded yet.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

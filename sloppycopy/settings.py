@@ -136,6 +136,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # AI Provider Settings
 import os
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_KEY")
 DEFAULT_AI_MODEL = os.getenv("DEFAULT_AI_MODEL", "anthropic/claude-3-haiku")
-USE_MOCK_AI = True
+USE_MOCK_AI = os.getenv("USE_MOCK_AI", "False") == "True"

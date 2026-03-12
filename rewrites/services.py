@@ -62,8 +62,12 @@ class RewriteGenerationService:
             logger.error("Author rewrite prompt template not found.")
             return None
 
+        # Use persona_prompt if available, otherwise fallback to bio
+        author_instructions = author.persona_prompt if author.persona_prompt else author.bio
+
         context = {
             "author": author,
+            "author_instructions": author_instructions,
             "style_sheet": style_rules,
             "story": story,
             "related_sources": sources_context

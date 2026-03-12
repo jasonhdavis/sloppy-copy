@@ -44,10 +44,9 @@
             </h1>
             <nav class="mt-4">
                 <ul class="flex justify-center gap-6 font-sans text-xs font-bold uppercase tracking-widest">
-                    <li><a href="/" class="hover:text-gray-600">Dashboard</a></li>
+                    <li><a href="/" class="hover:text-gray-600">Home</a></li>
                     <li><a href="{% url 'authors:list' %}" class="hover:text-gray-600">Authors</a></li>
-                    <li><a href="{% url 'rewrites:list' %}" class="hover:text-gray-600">Rewrites</a></li>
-                    <li><a href="/admin/" class="hover:text-gray-600">Admin</a></li>
+                    <li><a href="{% url 'core:cms_dashboard' %}" class="hover:text-gray-600">CMS</a></li>
                 </ul>
             </nav>
         </div>

@@ -15,6 +15,7 @@ class AIClient:
     Handles prompt loading, rendering, execution, and JSON parsing.
     """
     def __init__(self, provider=None):
+        from core.models import EditorialStyleSheet
         if provider:
             self.provider = provider
         elif getattr(settings, "USE_MOCK_AI", False):
@@ -22,7 +23,13 @@ class AIClient:
             self.provider = MockAIProvider()
         else:
             self.provider = OpenRouterProvider()
-        self.default_model = getattr(settings, "DEFAULT_AI_MODEL", "anthropic/claude-3-haiku")
+        
+        # Try to get model from active style sheet
+        style_sheet = EditorialStyleSheet.objects.filter(is_active=True).first()
+        if style_sheet and style_sheet.default_model:
+            self.default_model = style_sheet.default_model
+        else:
+            self.default_model = getattr(settings, "DEFAULT_AI_MODEL", "anthropic/claude-3-haiku")
 
     def generate(
         self,

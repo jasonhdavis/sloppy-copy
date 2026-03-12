@@ -8,24 +8,45 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         sources_data = [
             {
-                'name': 'TechCrunch',
-                'feed_url': 'https://techcrunch.com/feed/',
+                'name': 'BBC News',
+                'feed_url': 'https://feeds.bbci.co.uk/news/rss.xml',
                 'source_type': 'rss',
                 'is_active': True
             },
             {
-                'name': 'Hacker News',
-                'feed_url': 'https://hnrss.org/frontpage',
+                'name': 'NPR News',
+                'feed_url': 'https://feeds.npr.org/1001/rss.xml',
                 'source_type': 'rss',
                 'is_active': True
             },
             {
-                'name': 'The Verge',
-                'feed_url': 'https://www.theverge.com/rss/index.xml',
+                'name': 'NPR Business',
+                'feed_url': 'https://feeds.npr.org/1003/rss.xml',
+                'source_type': 'rss',
+                'is_active': True
+            },
+            {
+                'name': 'NPR Health',
+                'feed_url': 'https://feeds.npr.org/1004/rss.xml',
+                'source_type': 'rss',
+                'is_active': True
+            },
+            {
+                'name': 'AP News (Google)',
+                'feed_url': 'https://news.google.com/rss/search?q=when:24h+allinurl:apnews.com',
+                'source_type': 'rss',
+                'is_active': True
+            },
+            {
+                'name': 'Bloomberg (Google)',
+                'feed_url': 'https://news.google.com/rss/search?q=when:24h+allinurl:bloomberg.com',
                 'source_type': 'rss',
                 'is_active': True
             },
         ]
+
+        # Deactivate old sources
+        Source.objects.all().update(is_active=False)
 
         for data in sources_data:
             source, created = Source.objects.update_or_create(

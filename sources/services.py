@@ -103,6 +103,20 @@ class FeedIngestionService:
             # Truncate to 2000 chars as per spec
             summary = summary[:2000]
 
+        # Image Extraction
+        image_url = None
+        # Try media:content
+        media_content = entry.get('media_content')
+        if media_content and isinstance(media_content, list):
+            image_url = media_content[0].get('url')
+        
+        # Try links with image type
+        if not image_url:
+            for link in entry.get('links', []):
+                if 'image' in link.get('type', ''):
+                    image_url = link.get('href')
+                    break
+
         # Published Date
         published_at = None
         date_str = entry.get('published') or entry.get('updated')
@@ -121,7 +135,8 @@ class FeedIngestionService:
             'url': url,
             'summary': summary,
             'published_at': published_at,
-            'external_id': entry.get('id')
+            'external_id': entry.get('id'),
+            'image_url': image_url
         }
 
     @staticmethod
@@ -140,6 +155,7 @@ class FeedIngestionService:
                 summary=normalized_entry['summary'],
                 published_at=normalized_entry['published_at'],
                 external_id=normalized_entry['external_id'],
+                image_url=normalized_entry.get('image_url'),
                 status='ingested'
             )
             return story
