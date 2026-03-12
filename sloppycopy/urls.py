@@ -22,5 +22,8 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("sources/", include("sources.urls")),
-    path("", RedirectView.as_view(pattern_name="sources:source_digest"), name="home"),
+    path("orchestrator/", include("orchestrator.urls")),
+    path("rewrites/", include("rewrites.urls")),
+    path("authors/", include("authors.urls")),
+    path("", include("core.urls")),
 ]

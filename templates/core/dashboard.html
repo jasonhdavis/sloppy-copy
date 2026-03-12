@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Sloppy Copy{% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+    <!-- Stats Cards -->
+    <div class="border-b border-black py-4">
+        <span class="font-sans text-[10px] font-bold uppercase tracking-widest text-gray-500">Total Stories</span>
+        <h3 class="font-serif text-3xl font-bold">{{ stats.total_stories }}</h3>
+    </div>
+    <div class="border-b border-black py-4">
+        <span class="font-sans text-[10px] font-bold uppercase tracking-widest text-gray-500">Selected</span>
+        <h3 class="font-serif text-3xl font-bold">{{ stats.selected_stories }}</h3>
+    </div>
+    <div class="border-b border-black py-4">
+        <span class="font-sans text-[10px] font-bold uppercase tracking-widest text-gray-500">Rewrites</span>
+        <h3 class="font-serif text-3xl font-bold">{{ stats.total_rewrites }}</h3>
+    </div>
+    <div class="border-b border-black py-4">
+        <span class="font-sans text-[10px] font-bold uppercase tracking-widest text-gray-500">Authors</span>
+        <h3 class="font-serif text-3xl font-bold">{{ stats.total_authors }}</h3>
+    </div>
+</div>
+
+<div class="flex flex-col md:flex-row gap-12">
+    <!-- Main Column: Source Digest -->
+    <div class="w-full md:w-2/3">
+        <div class="flex justify-between items-end border-b-2 border-black pb-2 mb-6">
+            <h2 class="font-serif text-4xl font-bold uppercase tracking-tighter">Source Digest</h2>
+            <div class="flex gap-2">
+                <button hx-post="{% url 'sources:ingest_feeds' %}" hx-target="#ingestion-results" class="font-sans text-[10px] font-bold uppercase tracking-widest border border-black px-3 py-1 hover:bg-black hover:text-white transition-colors">
+                    Fetch Stories
+                </button>
+                <button hx-post="{% url 'orchestrator:run_pipeline' %}" class="font-sans text-[10px] font-bold uppercase tracking-widest bg-black text-white px-3 py-1 hover:bg-gray-800 transition-colors">
+                    Run Pipeline
+                </button>
+            </div>
+        </div>
+
+        <div id="ingestion-results"></div>
+
+        <!-- Masonry Grid -->
+        <div class="columns-1 sm:columns-2 gap-6 space-y-6">
+            {% for story in stories %}
+            <div class="break-inside-avoid border-b border-gray-200 pb-6">
+                <span class="font-sans text-[10px] font-bold uppercase tracking-tighter text-gray-600 mb-1 block">
+                    {{ story.source.name }} | {{ story.published_at|date:"M d, Y" }}
+                </span>
+                <h3 class="font-serif text-xl font-bold text-black leading-tight mb-2 hover:text-gray-700 cursor-pointer">
+                    <a href="{{ story.url }}" target="_blank">{{ story.title }}</a>
+                </h3>
+                {% if story.summary %}
+                <p class="font-serif text-sm text-gray-800 leading-snug mb-3">
+                    {{ story.summary|truncatewords:30 }}
+                </p>
+                {% endif %}
+                <div class="flex items-center gap-2">
+                    {% if story.ai_score %}
+                    <span class="variant-ghost rounded-none border border-gray-400 text-gray-700 text-[10px] uppercase px-1">
+                        Score: {{ story.ai_score }}
+                    </span>
+                    {% endif %}
+                    <span class="font-sans text-[10px] text-gray-500 uppercase">{{ story.status }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Sidebar: Pipeline Status & Feed Test -->
+    <div class="w-full md:w-1/3">
+        <div class="border-b-2 border-black pb-2 mb-6">
+            <h2 class="font-serif text-2xl font-bold uppercase tracking-tighter">Pipeline Status</h2>
+        </div>
+        
+        {% if latest_run %}
+        <div class="mb-8 font-sans">
+            <div class="flex justify-between mb-2">
+                <span class="text-xs font-bold uppercase">Status</span>
+                <span class="text-xs uppercase {% if latest_run.status == 'completed' %}text-green-600{% elif latest_run.status == 'failed' %}text-red-600{% else %}text-blue-600{% endif %}">
+                    {{ latest_run.status }}
+                </span>
+            </div>
+            <div class="flex justify-between mb-2">
+                <span class="text-xs font-bold uppercase">Started</span>
+                <span class="text-xs text-gray-500">{{ latest_run.started_at|timesince }} ago</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 mt-4">
+                <div class="bg-gray-50 p-2 border border-gray-200">
+                    <span class="block text-[10px] font-bold uppercase text-gray-500">Ingested</span>
+                    <span class="text-lg font-serif font-bold">{{ latest_run.stories_ingested }}</span>
+                </div>
+                <div class="bg-gray-50 p-2 border border-gray-200">
+                    <span class="block text-[10px] font-bold uppercase text-gray-500">Rewrites</span>
+                    <span class="text-lg font-serif font-bold">{{ latest_run.rewrites_generated }}</span>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p class="font-sans text-xs text-gray-500 italic mb-8">No pipeline runs recorded.</p>
+        {% endif %}
+
+        <div class="border-b-2 border-black pb-2 mb-6">
+            <h2 class="font-serif text-2xl font-bold uppercase tracking-tighter">Test Feed</h2>
+        </div>
+        <form hx-post="{% url 'sources:test_feed' %}" hx-target="#feed-test-results" class="space-y-4">
+            {% csrf_token %}
+            <div>
+                <label class="block font-sans text-[10px] font-bold uppercase tracking-widest mb-1">RSS URL</label>
+                <input type="url" name="url" required class="w-full border border-black p-2 font-sans text-sm focus:outline-none focus:ring-1 focus:ring-black" placeholder="https://example.com/rss">
+            </div>
+            <button type="submit" class="w-full bg-black text-white font-sans text-xs font-bold uppercase tracking-widest py-2 hover:bg-gray-800 transition-colors">
+                Test Feed
+            </button>
+        </form>
+        <div id="feed-test-results" class="mt-6"></div>
+    </div>
+</div>
+{% endblock %}

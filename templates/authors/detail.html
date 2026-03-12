@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}{{ author.name }} | Sloppy Copy{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <header class="flex flex-col md:flex-row gap-8 items-start mb-12 border-b border-black pb-12">
+        {% if author.avatar_url %}
+        <img src="{{ author.avatar_url }}" alt="{{ author.name }}" class="w-32 h-32 md:w-48 md:h-48 rounded-none border border-black object-cover">
+        {% else %}
+        <div class="w-32 h-32 md:w-48 md:h-48 bg-gray-100 border border-black flex items-center justify-center font-serif text-6xl font-bold">
+            {{ author.name|slice:":1" }}
+        </div>
+        {% endif %}
+        
+        <div class="flex-1">
+            <h1 class="font-serif text-5xl font-bold text-black leading-tight mb-2">{{ author.name }}</h1>
+            <p class="font-sans text-xs font-bold uppercase tracking-widest text-gray-600 mb-6">{{ author.writing_voice }}</p>
+            
+            <div class="font-serif text-lg leading-relaxed text-gray-900 mb-8">
+                {{ author.bio|linebreaks }}
+            </div>
+
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-sans text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Beat</h3>
+                    <p class="font-serif text-sm">{{ author.beat_description }}</p>
+                </div>
+                <div>
+                    <h3 class="font-sans text-[10px] font-bold uppercase tracking-widest text-gray-500 mb-2">Tone</h3>
+                    <div class="flex flex-wrap gap-2">
+                        {% for tag in author.tone_keywords %}
+                        <span class="variant-ghost rounded-none border border-gray-400 text-gray-700 text-[10px] uppercase px-1">
+                            {{ tag }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="border-b-2 border-black pb-2 mb-8">
+            <h2 class="font-serif text-3xl font-bold uppercase tracking-tighter">Recent Rewrites</h2>
+        </div>
+        
+        <div class="space-y-12">
+            {% for rewrite in author.assignments.all %}
+                {% for r in rewrite.rewrites.all %}
+                <div class="border-b border-gray-200 pb-8">
+                    <h3 class="font-serif text-2xl font-bold text-black leading-tight mb-2 hover:text-gray-700 cursor-pointer">
+                        <a href="{% url 'rewrites:detail' r.pk %}">{{ r.headline }}</a>
+                    </h3>
+                    <p class="font-serif text-base text-gray-800 leading-snug mb-4 italic">
+                        {{ r.dek }}
+                    </p>
+                    <span class="font-sans text-[10px] text-gray-500 uppercase">{{ r.created_at|date:"M d, Y" }}</span>
+                </div>
+                {% endfor %}
+            {% empty %}
+            <p class="font-sans text-gray-500 italic">No rewrites by this author yet.</p>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

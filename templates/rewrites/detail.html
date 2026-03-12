@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ rewrite.headline }} | Sloppy Copy{% endblock %}
+
+{% block content %}
+<article class="max-w-4xl mx-auto">
+    <header class="text-center mb-12 border-b border-black pb-8">
+        <span class="font-sans text-xs font-bold uppercase tracking-widest text-gray-600 mb-4 block">
+            {{ rewrite.assignment.author.name }}
+        </span>
+        <h1 class="font-serif text-5xl font-bold text-black leading-tight mb-4">
+            {{ rewrite.headline }}
+        </h1>
+        <p class="font-serif text-2xl text-gray-700 leading-snug mb-6">
+            {{ rewrite.dek }}
+        </p>
+        <div class="flex justify-center items-center gap-4 font-sans text-[10px] text-gray-500 uppercase tracking-widest">
+            <span>Published {{ rewrite.created_at|date:"F d, Y" }}</span>
+            <span>|</span>
+            <span>Model: {{ rewrite.model_used }}</span>
+        </div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Main Content -->
+        <div class="md:col-span-2">
+            <div class="font-serif text-lg leading-relaxed text-gray-900 space-y-6">
+                {{ rewrite.body|linebreaks }}
+            </div>
+        </div>
+
+        <!-- Sidebar: Comparison -->
+        <div class="md:col-span-1">
+            <div class="sticky top-8">
+                <div class="border-t-2 border-black pt-4 mb-6">
+                    <h3 class="font-sans text-xs font-bold uppercase tracking-widest mb-4">Original Source</h3>
+                    <div class="bg-gray-50 p-4 border border-gray-200">
+                        <h4 class="font-serif text-sm font-bold mb-2">{{ rewrite.assignment.story.title }}</h4>
+                        <p class="font-serif text-xs text-gray-600 mb-4">{{ rewrite.assignment.story.summary|truncatewords:50 }}</p>
+                        <a href="{{ rewrite.assignment.story.url }}" target="_blank" class="font-sans text-[10px] font-bold uppercase text-blue-600 hover:underline">Read Original &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-300 pt-4">
+                    <h3 class="font-sans text-xs font-bold uppercase tracking-widest mb-4">Author Persona</h3>
+                    <div class="font-sans text-xs text-gray-600">
+                        <p class="font-bold text-black mb-1">{{ rewrite.assignment.author.name }}</p>
+                        <p>{{ rewrite.assignment.author.bio|truncatewords:30 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+{% endblock %}

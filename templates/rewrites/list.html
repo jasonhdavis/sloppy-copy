@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Rewrites | Sloppy Copy{% endblock %}
+
+{% block content %}
+<div class="border-b-2 border-black pb-2 mb-8">
+    <h2 class="font-serif text-4xl font-bold uppercase tracking-tighter">Rewrites</h2>
+</div>
+
+<div class="columns-1 sm:columns-2 md:columns-3 gap-8 space-y-8">
+    {% for rewrite in rewrites %}
+    <div class="break-inside-avoid border-b border-gray-200 pb-8">
+        <span class="font-sans text-[10px] font-bold uppercase tracking-tighter text-gray-600 mb-1 block">
+            {{ rewrite.assignment.author.name }} | {{ rewrite.created_at|date:"M d, Y" }}
+        </span>
+        <h3 class="font-serif text-2xl font-bold text-black leading-tight mb-2 hover:text-gray-700 cursor-pointer">
+            <a href="{% url 'rewrites:detail' rewrite.pk %}">{{ rewrite.headline }}</a>
+        </h3>
+        <p class="font-serif text-base text-gray-800 leading-snug mb-4 italic">
+            {{ rewrite.dek }}
+        </p>
+        <div class="flex items-center gap-2">
+            <span class="variant-ghost rounded-none border border-gray-400 text-gray-700 text-[10px] uppercase px-1">
+                {{ rewrite.status }}
+            </span>
+            <span class="font-sans text-[10px] text-gray-500 uppercase">{{ rewrite.model_used }}</span>
+        </div>
+    </div>
+    {% empty %}
+    <p class="font-sans text-gray-500 italic">No rewrites generated yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

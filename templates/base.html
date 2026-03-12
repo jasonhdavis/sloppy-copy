@@ -13,7 +13,14 @@
     
     <!-- HTMX -->
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <!-- EasyMDE -->
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
     
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <!-- Google Fonts: Playfair Display & Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
@@ -37,10 +44,10 @@
             </h1>
             <nav class="mt-4">
                 <ul class="flex justify-center gap-6 font-sans text-xs font-bold uppercase tracking-widest">
-                    <li><a href="{% url 'sources:source_digest' %}" class="hover:text-gray-600">Source Digest</a></li>
-                    <li><a href="#" class="hover:text-gray-600">Editor AI</a></li>
-                    <li><a href="#" class="hover:text-gray-600">Authors</a></li>
-                    <li><a href="#" class="hover:text-gray-600">Rewrites</a></li>
+                    <li><a href="/" class="hover:text-gray-600">Dashboard</a></li>
+                    <li><a href="{% url 'authors:list' %}" class="hover:text-gray-600">Authors</a></li>
+                    <li><a href="{% url 'rewrites:list' %}" class="hover:text-gray-600">Rewrites</a></li>
+                    <li><a href="/admin/" class="hover:text-gray-600">Admin</a></li>
                 </ul>
             </nav>
         </div>
@@ -58,5 +65,20 @@
 
     <!-- Material Tailwind Scripts -->
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize EasyMDE on all textareas with class 'markdown-editor'
+            const editors = document.querySelectorAll('.markdown-editor');
+            editors.forEach(el => {
+                new EasyMDE({ element: el });
+            });
+        });
+
+        // HTMX CSRF setup
+        document.body.addEventListener('htmx:configRequest', (event) => {
+            event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+        });
+    </script>
 </body>
 </html>
